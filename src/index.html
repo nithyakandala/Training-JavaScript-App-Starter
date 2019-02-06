@@ -12,14 +12,43 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-tiny-pubsub/0.7.0/ba-tiny-pubsub.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#messageDivFail").hide();
+      })
+        </script>
   </head>
 
   <body class="container">
     <form class="form">
-       <!-- div.form-group>label{Name:}+input.form-control#name -->
-       <div class="form-group"><label for="">Name:</label><input type="text" class="form-control" id="name"></div>  
+      <br>
+      <div class="alert alert-success" id="messageDivSuccess">
+        <h1>Welcome</h1>
+      </div>
+      <div class="alert alert-danger" id="messageDivFail">
+        </div>
+      <hr class="my-4">
+      <!-- div.form-group>label{Name:}+input.form-control#name -->
+      <div class="form-group">
+        <label for="">Name:</label><input type="text" class="form-control is-valid" id="name" placeholder="Your Name" required>
+        </div>
+      <div class="form-group"><label for="">Email:</label><input type="text" class="form-control" id="email" placeholder="Your EmailId"></div>
+        
+      <div class="form-group"><label for="">GIT ID:</label><input type="text" class="form-control" id="git" placeholder="Your GitId"></div>
     </form>
-    <button class="btn btn-primary">Hello</button>
-    <script src="app/main.js"></script>
+    <button id="userSubmit" class="btn btn-primary">Submit</button>
+    <script src="app/user.js"></script>
+    <script src="app/messages.js"></script>
+    <script src="app/store.js"></script>
+   
+    <script src="app/user-controller.js"></script>
+    <script src="app/user-validator.js"></script>
+    <script src="app/add-User/onAddUserClick.js"></script>
+   
+    <script src="app/add-User/addUser.js"></script>
+   
+    <script src="app/add-User/addUserFormSuccessful.js"></script>
+    <script src="app/add-User/addUserFormFailed.js"></script>
+  
   </body>
 </html>
